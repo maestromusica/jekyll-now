@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Interview Preparations: Thread vs Process</title>
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Interview Preparations: Thread vs Process | Your awesome title</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Interview Preparations: Thread vs Process" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Modern programming languages abstract a lot of low-level details of how our code works. Nonetheless, a good understanding of underlying computer science concepts can help you write better code… and pass technical interviews 😉 Let’s talk about a popular interview question: “What are the differences between a process and a thread?”" />
+<meta property="og:description" content="Modern programming languages abstract a lot of low-level details of how our code works. Nonetheless, a good understanding of underlying computer science concepts can help you write better code… and pass technical interviews 😉 Let’s talk about a popular interview question: “What are the differences between a process and a thread?”" />
+<link rel="canonical" href="http://localhost:4000/interview-preparations/2017/12/29/thread-vs-process.html" />
+<meta property="og:url" content="http://localhost:4000/interview-preparations/2017/12/29/thread-vs-process.html" />
+<meta property="og:site_name" content="Your awesome title" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-12-29T00:00:00+01:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Interview Preparations: Thread vs Process","dateModified":"2017-12-29T00:00:00+01:00","url":"http://localhost:4000/interview-preparations/2017/12/29/thread-vs-process.html","datePublished":"2017-12-29T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/interview-preparations/2017/12/29/thread-vs-process.html"},"description":"Modern programming languages abstract a lot of low-level details of how our code works. Nonetheless, a good understanding of underlying computer science concepts can help you write better code… and pass technical interviews 😉 Let’s talk about a popular interview question: “What are the differences between a process and a thread?”","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+</head>
+  <body>
+    <main class="container">
+      <section class="about">
+        <a href="/"><img src="/assets/portfolio.png" alt="Lukasz Domanski"></a>
+        <h2 id="title">
+          <a href="/">Lukasz Domanski</a>
+        </h2>
+        <p class="tagline">Introducing hard to catch
+bugs better than anyone
+</p>
+        <ul class="social"><a href="https://github.com/maestromusica">
+              <li>
+                <i class="icon-github-circled"></i>
+              </li>
+            </a><a href="https://www.linkedin.com/in/ldomanski">
+              <li>
+                <i class="icon-linkedin-squared"></i>
+              </li>
+            </a><a href="https://twitter.com/lukdomanski">
+              <li>
+                <i class="icon-twitter-squared"></i>
+              </li>
+            </a></ul><nav class="navigation">
+            <ul>
+              
+                <li>
+                  <a href="/">Blog</a>
+                </li>
+              
+                <li>
+                  <a href="/resume">Resume</a>
+                </li>
+              
+            </ul>
+          </nav><p>&copy;
+          2020</p>
+      </section>
+      <section class="content">
+        <div class="post-container">
+  <a class="post-link" href="/interview-preparations/2017/12/29/thread-vs-process.html">
+    <h2 class="post-title">Interview Preparations: Thread vs Process</h2>
+  </a>
+  <div class="post-meta">
+    <ul class="post-categories"><li>interview-preparations</li></ul>
+    <div class="post-date"><i class="icon-calendar"></i>Dec 29, 2017</div>
+  </div>
+  <div class="post">
+    <p>Modern programming languages abstract a lot of low-level details of how our code
+works. Nonetheless, a good understanding of underlying computer science concepts
+can help you write better code… and pass technical interviews 😉 Let’s talk about a popular interview question: <em>“What are the differences between a process and a thread?”</em></p>
+
+<p>I will assume that you have a basic understanding of how a processor works, and
+how data is stored in memory. In particular, you should be familiar with <strong>CPU
+registers</strong>, <a href="https://www.gribblelab.org/CBootCamp/7_Memory_Stack_vs_Heap.html">stack, and
+heap</a>.</p>
+
+<p>Before we try to make any comparisons, we need to get a solid grasp of relevant
+terminology.</p>
+
+<p>First, we need to understand what a <strong>computer program</strong> is.</p>
+
+<blockquote>
+  <p><strong>A computer program is a set of instructions that can be executed by the CPU</strong>.</p>
+</blockquote>
+
+<p>A program is a static entity: it might be an executable file located somewhere
+in the file system. When you double-click the icon or run a command in the
+terminal, the program is loaded into RAM, and then it becomes a <strong>process</strong>.</p>
+
+<blockquote>
+  <p>A <strong>process</strong> is a program in execution.</p>
+</blockquote>
+
+<p>So, if you run a program multiple times there will be a few processes running
+simultaneously, all corresponding to the same program.</p>
+
+<p><strong>Why do we need processes?</strong></p>
+
+<p>Each process contains everything required to run (or restart) the program:</p>
+
+<ul>
+  <li><strong>Address space</strong> — an abstraction for all memory available to that process.
+Address space contains program’s code and data required to run the program
+(static data, heap, and stack).</li>
+  <li>One or more <strong>threads of execution</strong> (I’ll explain that term in detail later)</li>
+  <li>Set of <strong>OS resources</strong>, for example opened files or network connections</li>
+</ul>
+
+<figure class="class1 class2">
+<p><img src="https://cdn-images-1.medium.com/max/1000/0*30_qL_hReOgXKmMU.jpg" alt="" /></p>
+  <figcaption><em>A photo of a thread. I’m very funny.</em></figcaption>
+</figure>
+
+<p>Each process contains a single or multiple <strong>threads of execution</strong>. If a
+process has a single thread, only one action can be performed at a time. If a
+process has multiple threads, it can perform multiple actions at the same time.</p>
+
+<p>A thread is a sequence of instructions that can be executed independently from
+other code.</p>
+
+<blockquote>
+  <p>A Thread (or a thread of execution) is a sequence of instructions that can be
+processed by a single CPU core.</p>
+</blockquote>
+
+<p>Imagine that you are planning a programming conference: you should create a plan
+of the event: who will be giving talks, what will they be about, and so on
+(that’s our <strong>program</strong>). The big day comes, guests arrive and our event is
+taking place (our <strong>process</strong>). During the conference, many talks (<strong>threads</strong>)
+might happen at the same time.</p>
+
+<h4 id="threads"><strong>Threads</strong></h4>
+
+<p>Each thread contains all information necessary to execute it’s code. We need to
+keep track of 1) which part of the program is currently being executed and 2)
+what is currently stored in memory.</p>
+
+<p>That’s why each thread has its own <strong>program counter</strong> (a pointer that indicates
+which instruction will be executed next), <strong>CPU registers</strong>, and a <strong>stack</strong>.</p>
+
+<p>Threads within the same process share all other memory segments:</p>
+
+<ul>
+  <li><strong>heap</strong> — containing dynamically allocated variables</li>
+  <li><strong>text segment</strong> — containing program’s code</li>
+  <li><strong>data segment</strong> — containing global or static variables</li>
+</ul>
+
+<p>Other system resources such as currently opened files are shared as well. If a
+file is opened, all threads can use it.</p>
+
+<p><strong>Okay, but we didn’t really answer the question — what are the differences
+between a thread and a process?</strong></p>
+
+<p>The most significant, practical difference is in how processes and threads
+communicate.</p>
+
+<p>In a multithreaded process, <strong>threads share memory</strong>. Thus, many threads can
+access and modify the same memory, which may lead to bugs that are very
+difficult to find.</p>
+
+<p>Processes don’t share memory in this way, they have to use <a href="https://en.wikipedia.org/wiki/Inter-process_communication">inter-process
+communication</a>
+instead.</p>
+
+<p>Creating a process is fairly resource-intensive. It is generally more efficient
+to use a single multi-threaded process than to spawn multiple single-threaded
+processes.</p>
+
+<p>To summarise:</p>
+
+<ul>
+  <li>A <strong>process</strong> is a program in execution. A <strong>thread</strong> is a sequence of program’s
+instructions that can be executed by a single CPU.</li>
+  <li>A process might contain many threads. Those threads will share most of memory
+segments. <strong>Threads may access and modify shared memory.</strong> Processes use
+<em>inter-process communication</em> instead.</li>
+</ul>
+
+<hr />
+
+  </div><div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:4000/interview-preparations/2017/12/29/thread-vs-process.html';
+      this.page.identifier = 'http://localhost:4000/interview-preparations/2017/12/29/thread-vs-process.html';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://games.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript></div>
+
+      </section>
+    </main></body>
+</html>

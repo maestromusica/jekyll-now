@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-29T15:41:25+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2020/04/29/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-04-29T12:47:22+02:00</published><updated>2020-04-29T12:47:22+02:00</updated><id>http://localhost:4000/jekyll/update/2020/04/29/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/04/29/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Interview preparations: Operating System vs Kernel</title><link href="http://localhost:4000/interview-preparations/2018/03/01/kernel-vs-operating-system.html" rel="alternate" type="text/html" title="Interview preparations: Operating System vs Kernel" /><published>2018-03-01T00:00:00+01:00</published><updated>2018-03-01T00:00:00+01:00</updated><id>http://localhost:4000/interview-preparations/2018/03/01/kernel-vs-operating-system</id><content type="html" xml:base="http://localhost:4000/interview-preparations/2018/03/01/kernel-vs-operating-system.html">&lt;p&gt;Let’s talk about a kernel, an operating system, and all the differences between
+the two. I’ll explain what happens when you turn on your computer, and when you
+run programs. Computers, smartphones, even cars — operating systems are everywhere. It’s worth
+knowing why we need this type of software, and what it does (other than taking
+up that precious disk space).&lt;/p&gt;
+
+&lt;figure class=&quot;class1 class2&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1100/1*1qBb2G3QXlZUzPtN__Reog.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;figcaption&gt;Almost all electronic devices run some kind of an operating system
+(&lt;a href=&quot;https://www.pexels.com/photo/iphone-technology-iphone-6-plus-apple-17663/&quot;&gt;source&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;why-do-we-need-an-operating-system&quot;&gt;Why do we need an operating system?&lt;/h4&gt;
+
+&lt;p&gt;Computers changed quite a bit since the twentieth century when they were
+invented. First computers could only run a &lt;strong&gt;single program&lt;/strong&gt; until it finished…
+or crashed 😱&lt;/p&gt;
+
+&lt;p&gt;Each program used all of the available hardware and was responsible for all
+standard tasks a computer had to perform. For example, &lt;strong&gt;every program had to
+contain all necessary drivers&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Computers were not beginner friendly, to say the least.&lt;/p&gt;
+
+&lt;p&gt;Keeping track of what program was supposed to be run next was done by humans.
+Sometimes quite a bit of creativity was required:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;At Cambridge University the job queue [a queue of programs waiting to be
+executed] was at one time a washing line from which tapes were hung with
+different colored clothes-pegs to indicate job-priority.
+(&lt;a href=&quot;https://en.wikipedia.org/wiki/Operating_system#History&quot;&gt;source&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And you’re complaining that your internet is too slow to stream Full HD videos,
+huh? 🤣&lt;/p&gt;
+
+&lt;p&gt;As the complexity of software, demand, and the number of users grew, it became
+too cumbersome and time-consuming to do all those things manually.&lt;/p&gt;
+
+&lt;p&gt;A program that could manage hardware, schedule program execution, and monitor
+resources was needed. That software should:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Allow multiple applications to run at the same time&lt;/strong&gt;. Hardware resources (for
+example, CPU time, network connections, opened files, and so on) should be
+shared “fairly” between those programs.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Make sure that a buggy or malicious program cannot disrupt other
+applications&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;kernel&quot;&gt;Kernel&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Kernel is an always-running program that has complete control over everything
+in the system.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When you power on your device (for example, a computer or a smartphone) a small
+program called a &lt;strong&gt;boot loader&lt;/strong&gt; is executed. Boot loader is a very small
+program — it starts the process of loading the operating system (including the
+kernel) and finishes immediately afterwards.&lt;/p&gt;
+
+&lt;p&gt;From then on, kernel is the king.&lt;/p&gt;
+
+&lt;p&gt;It decides what program will run next, and for how long.&lt;/p&gt;
+
+&lt;p&gt;It decides which memory can be used by each program.&lt;/p&gt;
+
+&lt;p&gt;If a program wishes to use any input/output device (like a mouse, a keyboard,
+and so on), it has to request access to that device from the kernel. If multiple
+programs want to access the same resource at the same time, kernel decides which
+program will get access first.&lt;/p&gt;
+
+&lt;p&gt;Kernel makes sure that a buggy or malicious program cannot disrupt other
+programs. It stops programs from monopolizing access to hardware, or modifying
+memory belonging to other processes. If a program misbehaves kernel will kill it
+😨&lt;/p&gt;
+
+&lt;p&gt;Kernel is very powerful, but it only provides a basic level of control over the
+hardware it’s running on.&lt;/p&gt;
+
+&lt;figure class=&quot;class1 class2&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/880/1*Vg893Xwy99b_N5V6S9L0nw.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;figcaption&gt;Kernel is the king&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;operating-system&quot;&gt;Operating system&lt;/h3&gt;
+
+&lt;p&gt;In essence, a computer is just a tool we use to get things done. It has to be
+easy to use and user friendly. Hence, we need features such as a graphical user
+interface, a multimedia player, antivirus software, and so on.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;An operating system (OS) consists of a kernel and additional software
+providing those features&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;What software is included in the operating system is entirely up to the creator
+of that OS. This makes defining an OS very difficult so it’s often described as
+“whatever you get when you order an operating system”.&lt;/p&gt;
+
+&lt;p&gt;For example, Windows 10 offers:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a sophisticated kernel&lt;/li&gt;
+  &lt;li&gt;graphical user interface&lt;/li&gt;
+  &lt;li&gt;firewall and
+antivirus software&lt;/li&gt;
+  &lt;li&gt;web browser&lt;/li&gt;
+  &lt;li&gt;multimedia player&lt;/li&gt;
+  &lt;li&gt;small utility programs like a calculator, text editor, and so on&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;…and many other features.&lt;/p&gt;
+
+&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
+
+&lt;p&gt;A kernel is an essential part of an operating system. It’s an always-running
+program that is in control of everything in the system. It manages hardware
+resources and program execution.&lt;/p&gt;
+
+&lt;p&gt;An operating system consists of a  kernel and some additional software making
+user’s interaction with his or hers device more pleasant. This might include
+graphical user interface, shell, web browsers, and so on.&lt;/p&gt;</content><author><name></name></author><summary type="html">Let’s talk about a kernel, an operating system, and all the differences between the two. I’ll explain what happens when you turn on your computer, and when you run programs. Computers, smartphones, even cars — operating systems are everywhere. It’s worth knowing why we need this type of software, and what it does (other than taking up that precious disk space).</summary></entry><entry><title type="html">Interview preparations: Introduction to arrays, lists and dynamic arrays (Part 2)</title><link href="http://localhost:4000/interview-preparations/2018/02/04/arrays-lists-dynamic-arrays-part-2.html" rel="alternate" type="text/html" title="Interview preparations: Introduction to arrays, lists and dynamic arrays (Part 2)" /><published>2018-02-04T00:00:00+01:00</published><updated>2018-02-04T00:00:00+01:00</updated><id>http://localhost:4000/interview-preparations/2018/02/04/arrays-lists-dynamic-arrays-part-2</id><content type="html" xml:base="http://localhost:4000/interview-preparations/2018/02/04/arrays-lists-dynamic-arrays-part-2.html">&lt;p&gt;Modern programming languages abstract a lot of low-level details of how our code
+works. Nonetheless, a good understanding of underlying computer science concepts
+can help you write better code… and pass technical interviews 😉 In the previous part
+of this article we introduced arrays, lists, and dynamic arrays. Now, we will look into
+the operations they support and how fast those operations are.&lt;/p&gt;
+
+&lt;figure class=&quot;class1 class2&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1000/1*r9JNNy7QnX-y5MWkaMPtcg.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In the first part of the article we introduced three fundamental data
+structures:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;an array&lt;/strong&gt; — a collection of elements stored in the memory as a single,
+continuous block of data&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;a list&lt;/strong&gt; — a collection of elements, each containing a link to the next
+element&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;a dynamic array&lt;/strong&gt; — an array that is resized to fit all elements without
+wasting too much space&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let’s compare those data structures. What operations do they support? How fast
+are they?&lt;/p&gt;
+
+&lt;p&gt;A basic understanding of time complexity and big-O notation is required as I use
+them extensively. If you’re not familiar with those concepts, HackerRank has a
+great &lt;a href=&quot;https://www.youtube.com/watch?v=v4cd1O4zkGw&quot;&gt;video-explanation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let’s dig in!&lt;/p&gt;
+
+&lt;h3 id=&quot;what-operations-are-supported-by-those-data-structures-what-is-their-time-complexity&quot;&gt;What operations are supported by those data structures? What is their time complexity?&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;(In this section I denote the size of the array as &lt;strong&gt;n&lt;/strong&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;class1 class2&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*uCv0HsVqM6l4QwyrzF-TDw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;array&quot;&gt;Array&lt;/h4&gt;
+
+&lt;p&gt;“Vanilla” arrays are dead simple. We can:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;access an element given its index&lt;/strong&gt; — in &lt;strong&gt;O(1)&lt;/strong&gt; time. We know exactly where
+each element is located in memory, so we can access it very quickly.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That’s all. We can’t add or remove new elements (arrays always have a constant
+size).&lt;/p&gt;
+
+&lt;h4 id=&quot;dynamic-array&quot;&gt;Dynamic array&lt;/h4&gt;
+
+&lt;p&gt;Dynamic arrays are more interesting. As with “vanilla” arrays, given an index,
+we can &lt;strong&gt;access a corresponding element in constant time&lt;/strong&gt;. Dynamic arrays also
+support adding and removing elements.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Adding an element&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;at the end of the list&lt;/strong&gt; — takes, on average, &lt;strong&gt;O(1)&lt;/strong&gt; time. Remember that
+some insertions will take &lt;strong&gt;O(n)&lt;/strong&gt; time.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;at the beginning of the list, or somewhere in the middle&lt;/strong&gt; — takes linear
+time. To insert a new element in the middle of the list, we have to “shift” all
+preceding elements by one position (see illustration below). We have to copy a
+portion of the array — &lt;strong&gt;O(n)&lt;/strong&gt; elements, so this operation takes &lt;strong&gt;O(n)&lt;/strong&gt; time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Removing an element&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;from the end of the list&lt;/strong&gt; — takes, on average, &lt;strong&gt;O(1)&lt;/strong&gt; time. Again, some
+insertions are slow and take linear time.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;from somewhere else in the list&lt;/strong&gt; — takes &lt;strong&gt;O(n)&lt;/strong&gt; time. As with adding an
+element in the middle, we have to shift all preceding elements — this time in
+the opposite direction (see illustration below). Thus, removal will take
+&lt;strong&gt;O(n)&lt;/strong&gt; time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;class1 class2&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*wY28q3YhRQjRDWvp5-ENiQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;linked-list&quot;&gt;Linked List&lt;/h4&gt;
+
+&lt;p&gt;In a linked list, accessing an element with a given index &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; is a bit more
+complicated. As we don’t know where that element can be found in memory, we have
+to iterate through the list until we find it. This will take &lt;strong&gt;O(n)&lt;/strong&gt; time.
+That’s significantly slower than other data structures we discussed.&lt;/p&gt;
+
+&lt;p&gt;Lists allow adding and removing elements too.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Adding an element&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;at the beginning of the list&lt;/strong&gt; - is just a matter of changing a few pointers, so it can be done in &lt;strong&gt;O(1)&lt;/strong&gt; time. We have to change the value of &lt;code class=&quot;highlighter-rouge&quot;&gt;head&lt;/code&gt; so that it points to our new element &lt;code class=&quot;highlighter-rouge&quot;&gt;NEW&lt;/code&gt; and set &lt;code class=&quot;highlighter-rouge&quot;&gt;NEW.next_element&lt;/code&gt; so that it points to &lt;code class=&quot;highlighter-rouge&quot;&gt;A&lt;/code&gt; (see illustration below).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;somewhere in the middle&lt;/strong&gt; — can always be done in &lt;strong&gt;O(n)&lt;/strong&gt; time. First, we need to find the spot where we want to insert the element — this will take &lt;strong&gt;O(n)&lt;/strong&gt;. Inserting the element can be done in &lt;strong&gt;O(1)&lt;/strong&gt; time, so the whole operation takes &lt;strong&gt;O(n)&lt;/strong&gt; + &lt;strong&gt;O(1)&lt;/strong&gt; = &lt;strong&gt;O(n)&lt;/strong&gt; time.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;at the end of the list&lt;/strong&gt; — if we keep a reference to the last object, we can do this in &lt;strong&gt;O(1)&lt;/strong&gt; time! Otherwise, we have to iterate through the entire array to find the last element. This will take &lt;strong&gt;O(n)&lt;/strong&gt; time. Implementations of a link list typically include that reference to the last object to keep this operations quick.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Removing an element&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;from the beginning&lt;/strong&gt; — takes &lt;strong&gt;O(1)&lt;/strong&gt;. As with adding the element at the beginning of the list, we only need to change a few pointers.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;from anywhere else in the list&lt;/strong&gt; — takes &lt;strong&gt;O(n)&lt;/strong&gt; time. We have to find the element first (which will take &lt;strong&gt;O(n)&lt;/strong&gt; time) and remove it. To remove the element &lt;code class=&quot;highlighter-rouge&quot;&gt;C&lt;/code&gt; we change the value of &lt;code class=&quot;highlighter-rouge&quot;&gt;B.next_element&lt;/code&gt; so that it points to &lt;code class=&quot;highlighter-rouge&quot;&gt;D&lt;/code&gt;. That’s it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;That’s it! You know quite a lot about arrays and lists now. You should probably practice some &lt;a href=&quot;https://www.geeksforgeeks.org/top-20-linked-list-interview-question/&quot;&gt;interview questions&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;In the third (and last) part, we’ll investigate why arrays can be significantly faster than linked lists when iterate through elements.&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading!&lt;/p&gt;</content><author><name></name></author><summary type="html">Modern programming languages abstract a lot of low-level details of how our code works. Nonetheless, a good understanding of underlying computer science concepts can help you write better code… and pass technical interviews 😉 In the previous part of this article we introduced arrays, lists, and dynamic arrays. Now, we will look into the operations they support and how fast those operations are.</summary></entry><entry><title type="html">Interview preparations: Introduction to arrays, lists and dynamic arrays</title><link href="http://localhost:4000/interview-preparations/2018/01/28/arrays-lists-dynamic-arrays.html" rel="alternate" type="text/html" title="Interview preparations: Introduction to arrays, lists and dynamic arrays" /><published>2018-01-28T00:00:00+01:00</published><updated>2018-01-28T00:00:00+01:00</updated><id>http://localhost:4000/interview-preparations/2018/01/28/arrays-lists-dynamic-arrays</id><content type="html" xml:base="http://localhost:4000/interview-preparations/2018/01/28/arrays-lists-dynamic-arrays.html">&lt;p&gt;Modern programming languages abstract a lot of low-level details of how our code
+works. Nonetheless, a good understanding of underlying computer science concepts
+can help you write better code… and pass technical interviews 😉 Let’s talk about two fundamental data structures everyone needs to know:
+&lt;strong&gt;arrays&lt;/strong&gt; and &lt;strong&gt;linked lists&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;class1 class2&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*reYwnxuSVfy--DXjFgnjhQ.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;figcaption&gt;Photo by &lt;a href=&quot;https://www.pexels.com/photo/businesswomen-businesswoman-interview-meeting-70292/&quot;&gt;Tim Gouw&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;so-what-are-arrays-and-linked-lists-lets-think-low-level&quot;&gt;So what are arrays and linked lists? Let’s think low-level.&lt;/h3&gt;
+
+&lt;p&gt;An array is a collection of variables (or objects) that is stored in a memory as
+a consecutive block of data.&lt;/p&gt;
+
+&lt;figure class=&quot;class1 class2&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*htdnGT1LBPpiRMuw4sRkPg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;figcaption&gt;myArray in memory&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;When an array is declared, an appropriately sized block of memory is reserved.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;An array has a constant size.&lt;/strong&gt; The memory “following” the array might be
+already in use, so we can’t just make the array “longer” to store more elements.&lt;/p&gt;
+
+&lt;p&gt;Each element in the array has some index &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; that tells us where the element is
+in the array.&lt;/p&gt;
+
+&lt;p&gt;Element’s address (where it is located in the memory) can be easily computed. We
+need the address of the beginning of the array (called &lt;strong&gt;base address&lt;/strong&gt;), and an
+index &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; of that element:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;element_address = base_address + i * element_size&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This is important, because it allows us to &lt;strong&gt;quickly access any element with a
+known index.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;An &lt;strong&gt;array is just a block of memory containing a number of variables or objects&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;All elements are stored in order, one after another.&lt;/p&gt;
+
+&lt;p&gt;On the contrary, in a &lt;strong&gt;linked list&lt;/strong&gt; there is no particular order in which
+list’s elements are located in memory: they might be non-consecutive and
+out-of-order. This is because memory is allocated as we create elements, on
+as-needed basis.&lt;/p&gt;
+
+&lt;figure class=&quot;class1 class2&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*8ww-gpHZ-u7pJb1DTThWzw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;figcaption&gt;Linked list in memory&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In a (singly) linked list each element is represented by:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the element itself&lt;/li&gt;
+  &lt;li&gt;a pointer &lt;code class=&quot;highlighter-rouge&quot;&gt;next_element&lt;/code&gt; (represented by arrows on the illustration) to the next
+element in the list&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We have to keep a pointer (usually called &lt;code class=&quot;highlighter-rouge&quot;&gt;head&lt;/code&gt;) to the first element in the
+list. Often, we want to keep a pointer (usually called &lt;code class=&quot;highlighter-rouge&quot;&gt;tail&lt;/code&gt;) to the last
+element in the list for fast access. To summarize:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Element contains:
+   value - value/object we're storing
+   next_element - pointer to the next element in the list
+
+LinkedList contains:
+   head - pointer to the first element in the list
+   tail - pointer to the last element in the list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;dynamic-array&quot;&gt;&lt;strong&gt;Dynamic array&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;h4 id=&quot;arrays-always-have-a-constant-size-what-can-we-do-if-you-want-to-add-another-element-to-an-already-full-array&quot;&gt;&lt;strong&gt;Arrays always have a constant size. What can we do if you want to add another element to an already full array?&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;We can: 1) create a new, bigger array, 2) copy all elements from the old array
+to it, 3) add the new element at the end.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Dynamic_array&quot;&gt;Dynamic arrays&lt;/a&gt; use this approach.
+To add a new element:&lt;/p&gt;
+
+&lt;p&gt;A) If there is space in the underlying array — just add the element&lt;br /&gt; B) If
+there is no more space for a new element — create a new, bigger array (typically
+&lt;strong&gt;twice the size&lt;/strong&gt;), copy all elements from the old array, and add the new
+element at the end (see illustration below).&lt;/p&gt;
+
+&lt;figure class=&quot;class1 class2&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*gIsT4ryqzI3_gaMgFjte3A.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;figcaption&gt;Inserting elements into a dynamic array
+(&lt;a href=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Dynamic_array.svg/289px-Dynamic_array.svg.png&quot;&gt;source&lt;/a&gt;)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Size&lt;/strong&gt; (or &lt;strong&gt;logical size&lt;/strong&gt;) is the number of elements that are stored in our
+data structure. &lt;strong&gt;Capacity&lt;/strong&gt; is the maximum number of elements that could fit in
+the underlying array. For example, on the illustration below, initial capacity
+of the array is 2 and its size is 1.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Are those… turtles?&lt;/strong&gt;😱&lt;/p&gt;
+
+&lt;p&gt;Yes.&lt;/p&gt;
+
+&lt;p&gt;Notice that sometimes inserting a new element happens very fast (case A), but
+sometimes we need to &lt;strong&gt;copy an entire array&lt;/strong&gt; (case B). Thus, occasionally an
+insertion will take longer (as indicated by those adorable turtles).&lt;/p&gt;
+
+&lt;p&gt;How much longer? That depends on the number of elements in the array — copying
+an array takes linear time.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;That’s quite sluggish, isn’t?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Well, yeah, dynamic arrays are not &lt;em&gt;always&lt;/em&gt; fast. But those slow insertions are
+not happening that often…&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;It can be &lt;a href=&quot;http://www.cs.cornell.edu/courses/cs3110/2011sp/Lectures/lec20-amortized/amortized.htm&quot;&gt;proved&lt;/a&gt; that &lt;strong&gt;inserting an element into a dynamic array takes, on average, constant time&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;wait-how-can-this-be-true&quot;&gt;Wait, how can this be true?&lt;/h4&gt;
+
+&lt;p&gt;A “proper” proof is beyond the scope of this article, but I’ll try to give you an intuitive explanation.&lt;/p&gt;
+
+&lt;p&gt;When doubling the size of the array, we have to copy some number of elements (let’s call that number &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Newly allocated, bigger array will have &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; “free spots”, so next &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; insertions will be fast.&lt;/p&gt;
+
+&lt;p&gt;The “cost” of copying the array is proportional to &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt;, but it is “amortized” over &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; insertions. Thus, average cost “per insertion” is constant.&lt;/p&gt;
+
+&lt;p&gt;If you’re still confused (or curious), you might want to watch this excellent video on Coursera:&lt;/p&gt;
+
+&lt;h4 id=&quot;hey-but-what-about-this-extra-memory-we-reserved-what-happens-when-we-remove-elements&quot;&gt;Hey, but what about this extra memory we reserved? What happens when we remove elements?&lt;/h4&gt;
+
+&lt;p&gt;Good question. Imagine a full dynamic array with a capacity of 10 000 elements. Now, let’s suppose we remove 9 000 elements.&lt;/p&gt;
+
+&lt;p&gt;If we don’t resize the underlying array, our data structure will only use 10% of the allocated space. That’s not good.&lt;/p&gt;
+
+&lt;p&gt;Just as we increased the capacity of the array when adding elements, we should reduce the capacity when removing elements.&lt;/p&gt;
+
+&lt;p&gt;Typically, when the size of a dynamic array drops below a certain percentage of it’s capacity, we move all elements to a new, smaller array.&lt;/p&gt;
+
+&lt;p&gt;Like when adding elements, just the other way around!&lt;/p&gt;
+
+&lt;h4 id=&quot;but-i-always-just-added-and-removed-elements-without-think-about-any-of-those-things&quot;&gt;But I always just added and removed elements without think about any of those things!&lt;/h4&gt;
+
+&lt;p&gt;Many high-level programing languages provide functionality of dynamic arrays “out of the box”. JavaScript engines do
+&lt;a href=&quot;https://blogs.msdn.microsoft.com/jscript/2008/03/26/performance-optimization-of-arrays-part-i/&quot;&gt;magic&lt;/a&gt; that allows programmer to add and remove elements from the array as he pleases. In Python, lists are implemented using &lt;a href=&quot;https://docs.python.org/2/faq/design.html#how-are-lists-implemented&quot;&gt;dynamic arrays with some extra cleverness
+added&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Abstracting such details allows you to focus on solving the problem at hand and makes developing software easier.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;We talked about 3 fundamental data structures: arrays, lists and dynamic arrays.
+But we barely scratched the surface.&lt;/p&gt;
+
+&lt;p&gt;In the next part we will compare those data structures. We will investigate
+operations supported by them, and their time complexity.&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading!&lt;/p&gt;</content><author><name></name></author><summary type="html">Modern programming languages abstract a lot of low-level details of how our code works. Nonetheless, a good understanding of underlying computer science concepts can help you write better code… and pass technical interviews 😉 Let’s talk about two fundamental data structures everyone needs to know: arrays and linked lists.</summary></entry><entry><title type="html">Interview Preparations: Thread vs Process</title><link href="http://localhost:4000/interview-preparations/2017/12/29/thread-vs-process.html" rel="alternate" type="text/html" title="Interview Preparations: Thread vs Process" /><published>2017-12-29T00:00:00+01:00</published><updated>2017-12-29T00:00:00+01:00</updated><id>http://localhost:4000/interview-preparations/2017/12/29/thread-vs-process</id><content type="html" xml:base="http://localhost:4000/interview-preparations/2017/12/29/thread-vs-process.html">&lt;p&gt;Modern programming languages abstract a lot of low-level details of how our code
+works. Nonetheless, a good understanding of underlying computer science concepts
+can help you write better code… and pass technical interviews 😉 Let’s talk about a popular interview question: &lt;em&gt;“What are the differences between a process and a thread?”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I will assume that you have a basic understanding of how a processor works, and
+how data is stored in memory. In particular, you should be familiar with &lt;strong&gt;CPU
+registers&lt;/strong&gt;, &lt;a href=&quot;https://www.gribblelab.org/CBootCamp/7_Memory_Stack_vs_Heap.html&quot;&gt;stack, and
+heap&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Before we try to make any comparisons, we need to get a solid grasp of relevant
+terminology.&lt;/p&gt;
+
+&lt;p&gt;First, we need to understand what a &lt;strong&gt;computer program&lt;/strong&gt; is.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;A computer program is a set of instructions that can be executed by the CPU&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A program is a static entity: it might be an executable file located somewhere
+in the file system. When you double-click the icon or run a command in the
+terminal, the program is loaded into RAM, and then it becomes a &lt;strong&gt;process&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A &lt;strong&gt;process&lt;/strong&gt; is a program in execution.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, if you run a program multiple times there will be a few processes running
+simultaneously, all corresponding to the same program.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why do we need processes?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Each process contains everything required to run (or restart) the program:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Address space&lt;/strong&gt; — an abstraction for all memory available to that process.
+Address space contains program’s code and data required to run the program
+(static data, heap, and stack).&lt;/li&gt;
+  &lt;li&gt;One or more &lt;strong&gt;threads of execution&lt;/strong&gt; (I’ll explain that term in detail later)&lt;/li&gt;
+  &lt;li&gt;Set of &lt;strong&gt;OS resources&lt;/strong&gt;, for example opened files or network connections&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;class1 class2&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1000/0*30_qL_hReOgXKmMU.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;figcaption&gt;&lt;em&gt;A photo of a thread. I’m very funny.&lt;/em&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Each process contains a single or multiple &lt;strong&gt;threads of execution&lt;/strong&gt;. If a
+process has a single thread, only one action can be performed at a time. If a
+process has multiple threads, it can perform multiple actions at the same time.&lt;/p&gt;
+
+&lt;p&gt;A thread is a sequence of instructions that can be executed independently from
+other code.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A Thread (or a thread of execution) is a sequence of instructions that can be
+processed by a single CPU core.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Imagine that you are planning a programming conference: you should create a plan
+of the event: who will be giving talks, what will they be about, and so on
+(that’s our &lt;strong&gt;program&lt;/strong&gt;). The big day comes, guests arrive and our event is
+taking place (our &lt;strong&gt;process&lt;/strong&gt;). During the conference, many talks (&lt;strong&gt;threads&lt;/strong&gt;)
+might happen at the same time.&lt;/p&gt;
+
+&lt;h4 id=&quot;threads&quot;&gt;&lt;strong&gt;Threads&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;Each thread contains all information necessary to execute it’s code. We need to
+keep track of 1) which part of the program is currently being executed and 2)
+what is currently stored in memory.&lt;/p&gt;
+
+&lt;p&gt;That’s why each thread has its own &lt;strong&gt;program counter&lt;/strong&gt; (a pointer that indicates
+which instruction will be executed next), &lt;strong&gt;CPU registers&lt;/strong&gt;, and a &lt;strong&gt;stack&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Threads within the same process share all other memory segments:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;heap&lt;/strong&gt; — containing dynamically allocated variables&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;text segment&lt;/strong&gt; — containing program’s code&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;data segment&lt;/strong&gt; — containing global or static variables&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Other system resources such as currently opened files are shared as well. If a
+file is opened, all threads can use it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Okay, but we didn’t really answer the question — what are the differences
+between a thread and a process?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The most significant, practical difference is in how processes and threads
+communicate.&lt;/p&gt;
+
+&lt;p&gt;In a multithreaded process, &lt;strong&gt;threads share memory&lt;/strong&gt;. Thus, many threads can
+access and modify the same memory, which may lead to bugs that are very
+difficult to find.&lt;/p&gt;
+
+&lt;p&gt;Processes don’t share memory in this way, they have to use &lt;a href=&quot;https://en.wikipedia.org/wiki/Inter-process_communication&quot;&gt;inter-process
+communication&lt;/a&gt;
+instead.&lt;/p&gt;
+
+&lt;p&gt;Creating a process is fairly resource-intensive. It is generally more efficient
+to use a single multi-threaded process than to spawn multiple single-threaded
+processes.&lt;/p&gt;
+
+&lt;p&gt;To summarise:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A &lt;strong&gt;process&lt;/strong&gt; is a program in execution. A &lt;strong&gt;thread&lt;/strong&gt; is a sequence of program’s
+instructions that can be executed by a single CPU.&lt;/li&gt;
+  &lt;li&gt;A process might contain many threads. Those threads will share most of memory
+segments. &lt;strong&gt;Threads may access and modify shared memory.&lt;/strong&gt; Processes use
+&lt;em&gt;inter-process communication&lt;/em&gt; instead.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content><author><name></name></author><summary type="html">Modern programming languages abstract a lot of low-level details of how our code works. Nonetheless, a good understanding of underlying computer science concepts can help you write better code… and pass technical interviews 😉 Let’s talk about a popular interview question: “What are the differences between a process and a thread?”</summary></entry></feed>

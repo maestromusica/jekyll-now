@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Interview preparations: Introduction to arrays, lists and dynamic arrays (Part 2)</title>
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Interview preparations: Introduction to arrays, lists and dynamic arrays (Part 2) | Your awesome title</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Interview preparations: Introduction to arrays, lists and dynamic arrays (Part 2)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Modern programming languages abstract a lot of low-level details of how our code works. Nonetheless, a good understanding of underlying computer science concepts can help you write better code… and pass technical interviews 😉 In the previous part of this article we introduced arrays, lists, and dynamic arrays. Now, we will look into the operations they support and how fast those operations are." />
+<meta property="og:description" content="Modern programming languages abstract a lot of low-level details of how our code works. Nonetheless, a good understanding of underlying computer science concepts can help you write better code… and pass technical interviews 😉 In the previous part of this article we introduced arrays, lists, and dynamic arrays. Now, we will look into the operations they support and how fast those operations are." />
+<link rel="canonical" href="http://localhost:4000/interview-preparations/2018/02/04/arrays-lists-dynamic-arrays-part-2.html" />
+<meta property="og:url" content="http://localhost:4000/interview-preparations/2018/02/04/arrays-lists-dynamic-arrays-part-2.html" />
+<meta property="og:site_name" content="Your awesome title" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-02-04T00:00:00+01:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Interview preparations: Introduction to arrays, lists and dynamic arrays (Part 2)","dateModified":"2018-02-04T00:00:00+01:00","url":"http://localhost:4000/interview-preparations/2018/02/04/arrays-lists-dynamic-arrays-part-2.html","datePublished":"2018-02-04T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/interview-preparations/2018/02/04/arrays-lists-dynamic-arrays-part-2.html"},"description":"Modern programming languages abstract a lot of low-level details of how our code works. Nonetheless, a good understanding of underlying computer science concepts can help you write better code… and pass technical interviews 😉 In the previous part of this article we introduced arrays, lists, and dynamic arrays. Now, we will look into the operations they support and how fast those operations are.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+</head>
+  <body>
+    <main class="container">
+      <section class="about">
+        <a href="/"><img src="/assets/portfolio.png" alt="Lukasz Domanski"></a>
+        <h2 id="title">
+          <a href="/">Lukasz Domanski</a>
+        </h2>
+        <p class="tagline">Introducing hard to catch
+bugs better than anyone
+</p>
+        <ul class="social"><a href="https://github.com/maestromusica">
+              <li>
+                <i class="icon-github-circled"></i>
+              </li>
+            </a><a href="https://www.linkedin.com/in/ldomanski">
+              <li>
+                <i class="icon-linkedin-squared"></i>
+              </li>
+            </a><a href="https://twitter.com/lukdomanski">
+              <li>
+                <i class="icon-twitter-squared"></i>
+              </li>
+            </a></ul><nav class="navigation">
+            <ul>
+              
+                <li>
+                  <a href="/">Blog</a>
+                </li>
+              
+                <li>
+                  <a href="/resume">Resume</a>
+                </li>
+              
+            </ul>
+          </nav><p>&copy;
+          2020</p>
+      </section>
+      <section class="content">
+        <div class="post-container">
+  <a class="post-link" href="/interview-preparations/2018/02/04/arrays-lists-dynamic-arrays-part-2.html">
+    <h2 class="post-title">Interview preparations: Introduction to arrays, lists and dynamic arrays (Part 2)</h2>
+  </a>
+  <div class="post-meta">
+    <ul class="post-categories"><li>interview-preparations</li></ul>
+    <div class="post-date"><i class="icon-calendar"></i>Feb 4, 2018</div>
+  </div>
+  <div class="post">
+    <p>Modern programming languages abstract a lot of low-level details of how our code
+works. Nonetheless, a good understanding of underlying computer science concepts
+can help you write better code… and pass technical interviews 😉 In the previous part
+of this article we introduced arrays, lists, and dynamic arrays. Now, we will look into
+the operations they support and how fast those operations are.</p>
+
+<figure class="class1 class2">
+<p><img src="https://cdn-images-1.medium.com/max/1000/1*r9JNNy7QnX-y5MWkaMPtcg.jpeg" alt="" /></p>
+  <figcaption></figcaption>
+</figure>
+
+<p>In the first part of the article we introduced three fundamental data
+structures:</p>
+
+<ul>
+  <li><strong>an array</strong> — a collection of elements stored in the memory as a single,
+continuous block of data</li>
+  <li><strong>a list</strong> — a collection of elements, each containing a link to the next
+element</li>
+  <li><strong>a dynamic array</strong> — an array that is resized to fit all elements without
+wasting too much space</li>
+</ul>
+
+<p>Let’s compare those data structures. What operations do they support? How fast
+are they?</p>
+
+<p>A basic understanding of time complexity and big-O notation is required as I use
+them extensively. If you’re not familiar with those concepts, HackerRank has a
+great <a href="https://www.youtube.com/watch?v=v4cd1O4zkGw">video-explanation</a>.</p>
+
+<p>Let’s dig in!</p>
+
+<h3 id="what-operations-are-supported-by-those-data-structures-what-is-their-time-complexity">What operations are supported by those data structures? What is their time complexity?</h3>
+
+<p><em>(In this section I denote the size of the array as <strong>n</strong>)</em></p>
+
+<figure class="class1 class2">
+<p><img src="https://cdn-images-1.medium.com/max/800/1*uCv0HsVqM6l4QwyrzF-TDw.png" alt="" /></p>
+  <figcaption></figcaption>
+</figure>
+
+<h4 id="array">Array</h4>
+
+<p>“Vanilla” arrays are dead simple. We can:</p>
+
+<ul>
+  <li><strong>access an element given its index</strong> — in <strong>O(1)</strong> time. We know exactly where
+each element is located in memory, so we can access it very quickly.</li>
+</ul>
+
+<p>That’s all. We can’t add or remove new elements (arrays always have a constant
+size).</p>
+
+<h4 id="dynamic-array">Dynamic array</h4>
+
+<p>Dynamic arrays are more interesting. As with “vanilla” arrays, given an index,
+we can <strong>access a corresponding element in constant time</strong>. Dynamic arrays also
+support adding and removing elements.</p>
+
+<p><strong>Adding an element</strong></p>
+
+<ul>
+  <li><strong>at the end of the list</strong> — takes, on average, <strong>O(1)</strong> time. Remember that
+some insertions will take <strong>O(n)</strong> time.</li>
+  <li><strong>at the beginning of the list, or somewhere in the middle</strong> — takes linear
+time. To insert a new element in the middle of the list, we have to “shift” all
+preceding elements by one position (see illustration below). We have to copy a
+portion of the array — <strong>O(n)</strong> elements, so this operation takes <strong>O(n)</strong> time.</li>
+</ul>
+
+<p><strong>Removing an element</strong></p>
+
+<ul>
+  <li><strong>from the end of the list</strong> — takes, on average, <strong>O(1)</strong> time. Again, some
+insertions are slow and take linear time.</li>
+  <li><strong>from somewhere else in the list</strong> — takes <strong>O(n)</strong> time. As with adding an
+element in the middle, we have to shift all preceding elements — this time in
+the opposite direction (see illustration below). Thus, removal will take
+<strong>O(n)</strong> time.</li>
+</ul>
+
+<figure class="class1 class2">
+<p><img src="https://cdn-images-1.medium.com/max/800/1*wY28q3YhRQjRDWvp5-ENiQ.png" alt="" /></p>
+  <figcaption></figcaption>
+</figure>
+
+<h4 id="linked-list">Linked List</h4>
+
+<p>In a linked list, accessing an element with a given index <code class="highlighter-rouge">i</code> is a bit more
+complicated. As we don’t know where that element can be found in memory, we have
+to iterate through the list until we find it. This will take <strong>O(n)</strong> time.
+That’s significantly slower than other data structures we discussed.</p>
+
+<p>Lists allow adding and removing elements too.</p>
+
+<p><strong>Adding an element</strong></p>
+<ul>
+  <li>
+    <p><strong>at the beginning of the list</strong> - is just a matter of changing a few pointers, so it can be done in <strong>O(1)</strong> time. We have to change the value of <code class="highlighter-rouge">head</code> so that it points to our new element <code class="highlighter-rouge">NEW</code> and set <code class="highlighter-rouge">NEW.next_element</code> so that it points to <code class="highlighter-rouge">A</code> (see illustration below).</p>
+  </li>
+  <li><strong>somewhere in the middle</strong> — can always be done in <strong>O(n)</strong> time. First, we need to find the spot where we want to insert the element — this will take <strong>O(n)</strong>. Inserting the element can be done in <strong>O(1)</strong> time, so the whole operation takes <strong>O(n)</strong> + <strong>O(1)</strong> = <strong>O(n)</strong> time.</li>
+  <li><strong>at the end of the list</strong> — if we keep a reference to the last object, we can do this in <strong>O(1)</strong> time! Otherwise, we have to iterate through the entire array to find the last element. This will take <strong>O(n)</strong> time. Implementations of a link list typically include that reference to the last object to keep this operations quick.</li>
+</ul>
+
+<p><strong>Removing an element</strong></p>
+
+<ul>
+  <li><strong>from the beginning</strong> — takes <strong>O(1)</strong>. As with adding the element at the beginning of the list, we only need to change a few pointers.</li>
+  <li><strong>from anywhere else in the list</strong> — takes <strong>O(n)</strong> time. We have to find the element first (which will take <strong>O(n)</strong> time) and remove it. To remove the element <code class="highlighter-rouge">C</code> we change the value of <code class="highlighter-rouge">B.next_element</code> so that it points to <code class="highlighter-rouge">D</code>. That’s it.</li>
+</ul>
+
+<hr />
+
+<p>That’s it! You know quite a lot about arrays and lists now. You should probably practice some <a href="https://www.geeksforgeeks.org/top-20-linked-list-interview-question/">interview questions</a>!</p>
+
+<p>In the third (and last) part, we’ll investigate why arrays can be significantly faster than linked lists when iterate through elements.</p>
+
+<p>Thanks for reading!</p>
+
+  </div><div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:4000/interview-preparations/2018/02/04/arrays-lists-dynamic-arrays-part-2.html';
+      this.page.identifier = 'http://localhost:4000/interview-preparations/2018/02/04/arrays-lists-dynamic-arrays-part-2.html';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://games.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript></div>
+
+      </section>
+    </main></body>
+</html>

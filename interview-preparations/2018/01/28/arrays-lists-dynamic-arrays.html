@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Interview preparations: Introduction to arrays, lists and dynamic arrays</title>
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Interview preparations: Introduction to arrays, lists and dynamic arrays | Your awesome title</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Interview preparations: Introduction to arrays, lists and dynamic arrays" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Modern programming languages abstract a lot of low-level details of how our code works. Nonetheless, a good understanding of underlying computer science concepts can help you write better code… and pass technical interviews 😉 Let’s talk about two fundamental data structures everyone needs to know: arrays and linked lists." />
+<meta property="og:description" content="Modern programming languages abstract a lot of low-level details of how our code works. Nonetheless, a good understanding of underlying computer science concepts can help you write better code… and pass technical interviews 😉 Let’s talk about two fundamental data structures everyone needs to know: arrays and linked lists." />
+<link rel="canonical" href="http://localhost:4000/interview-preparations/2018/01/28/arrays-lists-dynamic-arrays.html" />
+<meta property="og:url" content="http://localhost:4000/interview-preparations/2018/01/28/arrays-lists-dynamic-arrays.html" />
+<meta property="og:site_name" content="Your awesome title" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-01-28T00:00:00+01:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Interview preparations: Introduction to arrays, lists and dynamic arrays","dateModified":"2018-01-28T00:00:00+01:00","url":"http://localhost:4000/interview-preparations/2018/01/28/arrays-lists-dynamic-arrays.html","datePublished":"2018-01-28T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/interview-preparations/2018/01/28/arrays-lists-dynamic-arrays.html"},"description":"Modern programming languages abstract a lot of low-level details of how our code works. Nonetheless, a good understanding of underlying computer science concepts can help you write better code… and pass technical interviews 😉 Let’s talk about two fundamental data structures everyone needs to know: arrays and linked lists.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+</head>
+  <body>
+    <main class="container">
+      <section class="about">
+        <a href="/"><img src="/assets/portfolio.png" alt="Lukasz Domanski"></a>
+        <h2 id="title">
+          <a href="/">Lukasz Domanski</a>
+        </h2>
+        <p class="tagline">Introducing hard to catch
+bugs better than anyone
+</p>
+        <ul class="social"><a href="https://github.com/maestromusica">
+              <li>
+                <i class="icon-github-circled"></i>
+              </li>
+            </a><a href="https://www.linkedin.com/in/ldomanski">
+              <li>
+                <i class="icon-linkedin-squared"></i>
+              </li>
+            </a><a href="https://twitter.com/lukdomanski">
+              <li>
+                <i class="icon-twitter-squared"></i>
+              </li>
+            </a></ul><nav class="navigation">
+            <ul>
+              
+                <li>
+                  <a href="/">Blog</a>
+                </li>
+              
+                <li>
+                  <a href="/resume">Resume</a>
+                </li>
+              
+            </ul>
+          </nav><p>&copy;
+          2020</p>
+      </section>
+      <section class="content">
+        <div class="post-container">
+  <a class="post-link" href="/interview-preparations/2018/01/28/arrays-lists-dynamic-arrays.html">
+    <h2 class="post-title">Interview preparations: Introduction to arrays, lists and dynamic arrays</h2>
+  </a>
+  <div class="post-meta">
+    <ul class="post-categories"><li>interview-preparations</li></ul>
+    <div class="post-date"><i class="icon-calendar"></i>Jan 28, 2018</div>
+  </div>
+  <div class="post">
+    <p>Modern programming languages abstract a lot of low-level details of how our code
+works. Nonetheless, a good understanding of underlying computer science concepts
+can help you write better code… and pass technical interviews 😉 Let’s talk about two fundamental data structures everyone needs to know:
+<strong>arrays</strong> and <strong>linked lists</strong>.</p>
+
+<figure class="class1 class2">
+<p><img src="https://cdn-images-1.medium.com/max/800/1*reYwnxuSVfy--DXjFgnjhQ.jpeg" alt="" /></p>
+  <figcaption>Photo by <a href="https://www.pexels.com/photo/businesswomen-businesswoman-interview-meeting-70292/">Tim Gouw</a></figcaption>
+</figure>
+
+<h3 id="so-what-are-arrays-and-linked-lists-lets-think-low-level">So what are arrays and linked lists? Let’s think low-level.</h3>
+
+<p>An array is a collection of variables (or objects) that is stored in a memory as
+a consecutive block of data.</p>
+
+<figure class="class1 class2">
+<p><img src="https://cdn-images-1.medium.com/max/800/1*htdnGT1LBPpiRMuw4sRkPg.png" alt="" /></p>
+  <figcaption>myArray in memory</figcaption>
+</figure>
+
+<p>When an array is declared, an appropriately sized block of memory is reserved.</p>
+
+<p><strong>An array has a constant size.</strong> The memory “following” the array might be
+already in use, so we can’t just make the array “longer” to store more elements.</p>
+
+<p>Each element in the array has some index <code class="highlighter-rouge">i</code> that tells us where the element is
+in the array.</p>
+
+<p>Element’s address (where it is located in the memory) can be easily computed. We
+need the address of the beginning of the array (called <strong>base address</strong>), and an
+index <code class="highlighter-rouge">i</code> of that element:</p>
+
+<p><code class="highlighter-rouge">element_address = base_address + i * element_size</code></p>
+
+<p>This is important, because it allows us to <strong>quickly access any element with a
+known index.</strong></p>
+
+<blockquote>
+  <p>An <strong>array is just a block of memory containing a number of variables or objects</strong>.</p>
+</blockquote>
+
+<p>All elements are stored in order, one after another.</p>
+
+<p>On the contrary, in a <strong>linked list</strong> there is no particular order in which
+list’s elements are located in memory: they might be non-consecutive and
+out-of-order. This is because memory is allocated as we create elements, on
+as-needed basis.</p>
+
+<figure class="class1 class2">
+<p><img src="https://cdn-images-1.medium.com/max/800/1*8ww-gpHZ-u7pJb1DTThWzw.png" alt="" /></p>
+  <figcaption>Linked list in memory</figcaption>
+</figure>
+
+<p>In a (singly) linked list each element is represented by:</p>
+
+<ul>
+  <li>the element itself</li>
+  <li>a pointer <code class="highlighter-rouge">next_element</code> (represented by arrows on the illustration) to the next
+element in the list</li>
+</ul>
+
+<p>We have to keep a pointer (usually called <code class="highlighter-rouge">head</code>) to the first element in the
+list. Often, we want to keep a pointer (usually called <code class="highlighter-rouge">tail</code>) to the last
+element in the list for fast access. To summarize:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Element contains:
+   value - value/object we're storing
+   next_element - pointer to the next element in the list
+
+LinkedList contains:
+   head - pointer to the first element in the list
+   tail - pointer to the last element in the list
+</code></pre></div></div>
+
+<h3 id="dynamic-array"><strong>Dynamic array</strong></h3>
+
+<h4 id="arrays-always-have-a-constant-size-what-can-we-do-if-you-want-to-add-another-element-to-an-already-full-array"><strong>Arrays always have a constant size. What can we do if you want to add another element to an already full array?</strong></h4>
+
+<p>We can: 1) create a new, bigger array, 2) copy all elements from the old array
+to it, 3) add the new element at the end.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Dynamic_array">Dynamic arrays</a> use this approach.
+To add a new element:</p>
+
+<p>A) If there is space in the underlying array — just add the element<br /> B) If
+there is no more space for a new element — create a new, bigger array (typically
+<strong>twice the size</strong>), copy all elements from the old array, and add the new
+element at the end (see illustration below).</p>
+
+<figure class="class1 class2">
+<p><img src="https://cdn-images-1.medium.com/max/800/1*gIsT4ryqzI3_gaMgFjte3A.png" alt="" /></p>
+  <figcaption>Inserting elements into a dynamic array
+(<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Dynamic_array.svg/289px-Dynamic_array.svg.png">source</a>)</figcaption>
+</figure>
+
+<p><strong>Size</strong> (or <strong>logical size</strong>) is the number of elements that are stored in our
+data structure. <strong>Capacity</strong> is the maximum number of elements that could fit in
+the underlying array. For example, on the illustration below, initial capacity
+of the array is 2 and its size is 1.</p>
+
+<p><strong>Are those… turtles?</strong>😱</p>
+
+<p>Yes.</p>
+
+<p>Notice that sometimes inserting a new element happens very fast (case A), but
+sometimes we need to <strong>copy an entire array</strong> (case B). Thus, occasionally an
+insertion will take longer (as indicated by those adorable turtles).</p>
+
+<p>How much longer? That depends on the number of elements in the array — copying
+an array takes linear time.</p>
+
+<p><strong>That’s quite sluggish, isn’t?</strong></p>
+
+<p>Well, yeah, dynamic arrays are not <em>always</em> fast. But those slow insertions are
+not happening that often…</p>
+
+<blockquote>
+  <p>It can be <a href="http://www.cs.cornell.edu/courses/cs3110/2011sp/Lectures/lec20-amortized/amortized.htm">proved</a> that <strong>inserting an element into a dynamic array takes, on average, constant time</strong>.</p>
+</blockquote>
+
+<h4 id="wait-how-can-this-be-true">Wait, how can this be true?</h4>
+
+<p>A “proper” proof is beyond the scope of this article, but I’ll try to give you an intuitive explanation.</p>
+
+<p>When doubling the size of the array, we have to copy some number of elements (let’s call that number <code class="highlighter-rouge">x</code>).</p>
+
+<p>Newly allocated, bigger array will have <code class="highlighter-rouge">x</code> “free spots”, so next <code class="highlighter-rouge">x</code> insertions will be fast.</p>
+
+<p>The “cost” of copying the array is proportional to <code class="highlighter-rouge">x</code>, but it is “amortized” over <code class="highlighter-rouge">x</code> insertions. Thus, average cost “per insertion” is constant.</p>
+
+<p>If you’re still confused (or curious), you might want to watch this excellent video on Coursera:</p>
+
+<h4 id="hey-but-what-about-this-extra-memory-we-reserved-what-happens-when-we-remove-elements">Hey, but what about this extra memory we reserved? What happens when we remove elements?</h4>
+
+<p>Good question. Imagine a full dynamic array with a capacity of 10 000 elements. Now, let’s suppose we remove 9 000 elements.</p>
+
+<p>If we don’t resize the underlying array, our data structure will only use 10% of the allocated space. That’s not good.</p>
+
+<p>Just as we increased the capacity of the array when adding elements, we should reduce the capacity when removing elements.</p>
+
+<p>Typically, when the size of a dynamic array drops below a certain percentage of it’s capacity, we move all elements to a new, smaller array.</p>
+
+<p>Like when adding elements, just the other way around!</p>
+
+<h4 id="but-i-always-just-added-and-removed-elements-without-think-about-any-of-those-things">But I always just added and removed elements without think about any of those things!</h4>
+
+<p>Many high-level programing languages provide functionality of dynamic arrays “out of the box”. JavaScript engines do
+<a href="https://blogs.msdn.microsoft.com/jscript/2008/03/26/performance-optimization-of-arrays-part-i/">magic</a> that allows programmer to add and remove elements from the array as he pleases. In Python, lists are implemented using <a href="https://docs.python.org/2/faq/design.html#how-are-lists-implemented">dynamic arrays with some extra cleverness
+added</a>.</p>
+
+<p>Abstracting such details allows you to focus on solving the problem at hand and makes developing software easier.</p>
+
+<hr />
+
+<p>We talked about 3 fundamental data structures: arrays, lists and dynamic arrays.
+But we barely scratched the surface.</p>
+
+<p>In the next part we will compare those data structures. We will investigate
+operations supported by them, and their time complexity.</p>
+
+<p>Thanks for reading!</p>
+
+  </div><div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:4000/interview-preparations/2018/01/28/arrays-lists-dynamic-arrays.html';
+      this.page.identifier = 'http://localhost:4000/interview-preparations/2018/01/28/arrays-lists-dynamic-arrays.html';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://games.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript></div>
+
+      </section>
+    </main></body>
+</html>
