@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Leaky abstractions, CPU cache …and why programming is fun</title>
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Leaky abstractions, CPU cache …and why programming is fun | Your awesome title</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Leaky abstractions, CPU cache …and why programming is fun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Modern programming languages abstract a lot of low-level details of how our code works. Nonetheless, a good understanding of underlying computer science concepts can help you write better code… and pass technical interviews 😉 Let’s talk about what is a CPU cache and why it’s important." />
+<meta property="og:description" content="Modern programming languages abstract a lot of low-level details of how our code works. Nonetheless, a good understanding of underlying computer science concepts can help you write better code… and pass technical interviews 😉 Let’s talk about what is a CPU cache and why it’s important." />
+<link rel="canonical" href="http://localhost:4000/interview-preparations/2018/02/20/what-is-cpu-cache.html" />
+<meta property="og:url" content="http://localhost:4000/interview-preparations/2018/02/20/what-is-cpu-cache.html" />
+<meta property="og:site_name" content="Your awesome title" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-02-20T00:00:00+01:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Leaky abstractions, CPU cache …and why programming is fun","dateModified":"2018-02-20T00:00:00+01:00","url":"http://localhost:4000/interview-preparations/2018/02/20/what-is-cpu-cache.html","datePublished":"2018-02-20T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/interview-preparations/2018/02/20/what-is-cpu-cache.html"},"description":"Modern programming languages abstract a lot of low-level details of how our code works. Nonetheless, a good understanding of underlying computer science concepts can help you write better code… and pass technical interviews 😉 Let’s talk about what is a CPU cache and why it’s important.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+</head>
+  <body>
+    <main class="container">
+      <section class="about">
+        <a href="/"><img src="/assets/portfolio.png" alt="Lukasz Domanski"></a>
+        <h2 id="title">
+          <a href="/">Lukasz Domanski</a>
+        </h2>
+        <p class="tagline">Introducing hard to catch
+bugs better than anyone
+</p>
+        <ul class="social"><a href="https://github.com/maestromusica">
+              <li>
+                <i class="icon-github-circled"></i>
+              </li>
+            </a><a href="https://www.linkedin.com/in/ldomanski">
+              <li>
+                <i class="icon-linkedin-squared"></i>
+              </li>
+            </a><a href="https://twitter.com/lukdomanski">
+              <li>
+                <i class="icon-twitter-squared"></i>
+              </li>
+            </a></ul><nav class="navigation">
+            <ul>
+              
+                <li>
+                  <a href="/">Blog</a>
+                </li>
+              
+                <li>
+                  <a href="/resume">Resume</a>
+                </li>
+              
+            </ul>
+          </nav><p>&copy;
+          2020</p>
+      </section>
+      <section class="content">
+        <div class="post-container">
+  <a class="post-link" href="/interview-preparations/2018/02/20/what-is-cpu-cache.html">
+    <h2 class="post-title">Leaky abstractions, CPU cache …and why programming is fun</h2>
+  </a>
+  <div class="post-meta">
+    <ul class="post-categories"><li>interview-preparations</li></ul>
+    <div class="post-date"><i class="icon-calendar"></i>Feb 20, 2018</div>
+  </div>
+  <div class="post">
+    <p>Modern programming languages abstract a lot of low-level details of how our code
+works. Nonetheless, a good understanding of underlying computer science concepts
+can help you write better code… and pass technical interviews 😉 Let’s talk about
+what is a CPU cache and why it’s important.</p>
+
+<figure class="class1 class2">
+<p><img src="https://cdn-images-1.medium.com/max/880/1*ISecwEffT-z73UDJ3IpPww.png" alt="" /></p>
+  <figcaption></figcaption>
+</figure>
+
+<p>During my computer science degree, I learned about basic building blocks of
+electronic circuits, and how they can be used to build logic gates. Those logic
+gates provide a <strong>layer of abstraction</strong> that allows engineers to reason in
+terms of logic operations, and not electrical currents and voltages.</p>
+
+<p>Logic gates  can be combined  to build a computer that provides us with another
+layer of abstraction. It allows a programmer to think in terms of a set of
+available CPU instructions and not just logic gates.</p>
+
+<p>Languages like Python allow programmers to think in terms of high level concepts
+and not just basic operations the CPU supports — that’s yet another layer of
+abstraction.</p>
+
+<figure class="class1 class2">
+<p><img src="https://cdn-images-1.medium.com/max/880/1*2x6n0n_2I7piSq8A-Sr35Q.jpeg" alt="" /></p>
+  <figcaption></figcaption>
+</figure>
+
+<p>In computer science, more than in any other field, we have many layers of
+abstraction that enable us to solve problems faster, without worrying about the
+underlying implementation.</p>
+
+<p>But there is no such thing as a perfect abstraction. <a href="https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/">All abstraction
+leak</a>
+at one point or another,  and we suddenly have to deal with the underlying
+complexity.</p>
+
+<p>That’s one of the reasons programming is so fun… and frustrating. Concepts and
+ideas interweave, sometimes making debugging very challenging — but also very
+rewarding.</p>
+
+<h3 id="high-level-question-low-level-answer">High level question— low level answer</h3>
+
+<figure class="class1 class2">
+<p><img src="https://cdn-images-1.medium.com/max/880/1*yj8ZHxYczXzyaSuqqmbO-Q.png" alt="" /></p>
+  <figcaption>An array (top) vs a linked list (bottom) — note how elements of a list are
+scattered around the memory</figcaption>
+</figure>
+
+<p>Let’s look at an example — a high level problem. Let’s say you have to decide
+between using <a href="https://medium.com/@lukdomanski/interview-preparations-everything-you-need-to-know-about-lists-and-arrays-81093c140e78">a linked list and an
+array</a>.
+The main requirement is that iterating through elements has to be as fast as
+possible. What do you think — which data structure will be faster?</p>
+
+<p>The time it takes to iterate through all elements is <strong>proportional to the
+number of elements</strong> — the bigger the list/array, the longer it will take to
+visit all elements. Quite intuitive, right?</p>
+
+<p>From a high-level point of view, it should not matter if you chose to use an
+array or a list. Both data structures should take more or less the same amount
+of time.</p>
+
+<p>You might be surprised to learn that an array can be <a href="https://stackoverflow.com/questions/36939141/why-use-lists-when-arrays-are-faster">significantly
+faster</a>
+than a linked list.</p>
+
+<h4 id="but-whyyyyyyyyy">But whyyyyyyyyy</h4>
+
+<p>To understand why, we have to go down many levels of abstraction — we have to
+investigate how the hardware you’re using works. First, we need to understand
+what a <a href="https://en.wikipedia.org/wiki/CPU_cache">CPU cache</a> is.</p>
+
+<p>Modern processors are very fast in comparison to how much time it takes to
+access main memory. To reduce the time it takes to access RAM, data that is most
+likely to be needed by the CPU is placed in a memory that’s smaller, faster, and
+located “closer” to the processor. We call that memory <strong>CPU cache.</strong></p>
+
+<p>Imagine working in a grocery store that is getting its supplies from a big
+warehouse. The warehouse can store a lot of stuff but it takes a while to find
+and access things kept there.</p>
+
+<p>That’s why every grocery store has a certain supply of all products (those most
+likely to be purchased by customers) stored on its premises. You can’t store
+that many things in the store, but they are  quickly accessible.</p>
+
+<p>This is exactly how a CPU cache works.</p>
+
+<figure class="class1 class2">
+<p><img src="https://cdn-images-1.medium.com/max/880/1*jwPBgH1VX05BHhN8vrQBxg.jpeg" alt="" /></p>
+  <figcaption>Main memory is like a warehouse — it can store a lot of stuff but it takes a
+while to access it</figcaption>
+</figure>
+
+<h4 id="you-might-be-asking-how-do-we-know-what-data-should-be-stored-in-cache">You might be asking: how do we know what data should be stored in cache?</h4>
+
+<p>A computer program is basically just a sequence of instructions to be executed
+by the CPU. Those instructions are often accessed in order, one after another.</p>
+
+<p>The same is true for arrays — we often iterate through them, accessing all
+elements in order, one after another. If we’re accessing an element with an
+index 5, it’s also likely we are interested in elements 6 and 7.</p>
+
+<p>That’s why memory addresses that are “close” to a recently accessed address are
+more likely to be visited again. <strong>When accessing some memory, “nearby” segments
+of memory should be place in cache as well.</strong></p>
+
+<h4 id="okay-that-is-interesting-but-what-does-it-have-to-do-with-our-data-structures">Okay, that is interesting. But what does it have to do with our data structures?</h4>
+
+<p>Let’s supposed that a CPU needs to access some memory address. First, it will
+check if it’s available in the cache. If it is, then it can be accessed very
+quickly.</p>
+
+<p>However, if it’s not currently stored in the cache, we have to fetch it from the
+main memory. We call that a <strong>cache miss</strong>. Cache misses slow down the execution
+of our code because accessing the main memory is relatively slow.</p>
+
+<p>Since all elements in the array are stored as a continuous block of memory, when
+reading an element with some index <code class="highlighter-rouge">k</code>, following elements (<code class="highlighter-rouge">k+1</code>, <code class="highlighter-rouge">k+2</code>,
+<code class="highlighter-rouge">k+3</code>,…) will be cached as well.</p>
+
+<p><strong>This leads to fewer cache misses</strong> and results in better performance compared
+to a linked list, as in a linked list elements might be scattered around the
+memory.</p>
+
+<hr />
+
+<p>To answer a seemingly simple question we had to dive really deep. We had to
+understand what a CPU cache is and how it works.</p>
+
+<p>I think we can all agree — programming never gets boring 😀</p>
+
+  </div><div id="disqus_thread" style="margin-top:25px"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:4000/interview-preparations/2018/02/20/what-is-cpu-cache.html';
+      this.page.identifier = 'http://localhost:4000/interview-preparations/2018/02/20/what-is-cpu-cache.html';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://games.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+      powered by Disqus.</a></noscript></div>
+
+      </section>
+    </main></body>
+</html>

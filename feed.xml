@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-29T15:41:25+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2020/04/29/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-04-29T12:47:22+02:00</published><updated>2020-04-29T12:47:22+02:00</updated><id>http://localhost:4000/jekyll/update/2020/04/29/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/04/29/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-30T13:31:16+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2020/04/29/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-04-29T12:47:22+02:00</published><updated>2020-04-29T12:47:22+02:00</updated><id>http://localhost:4000/jekyll/update/2020/04/29/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/04/29/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
 
@@ -134,7 +134,137 @@ resources and program execution.&lt;/p&gt;
 
 &lt;p&gt;An operating system consists of a  kernel and some additional software making
 user’s interaction with his or hers device more pleasant. This might include
-graphical user interface, shell, web browsers, and so on.&lt;/p&gt;</content><author><name></name></author><summary type="html">Let’s talk about a kernel, an operating system, and all the differences between the two. I’ll explain what happens when you turn on your computer, and when you run programs. Computers, smartphones, even cars — operating systems are everywhere. It’s worth knowing why we need this type of software, and what it does (other than taking up that precious disk space).</summary></entry><entry><title type="html">Interview preparations: Introduction to arrays, lists and dynamic arrays (Part 2)</title><link href="http://localhost:4000/interview-preparations/2018/02/04/arrays-lists-dynamic-arrays-part-2.html" rel="alternate" type="text/html" title="Interview preparations: Introduction to arrays, lists and dynamic arrays (Part 2)" /><published>2018-02-04T00:00:00+01:00</published><updated>2018-02-04T00:00:00+01:00</updated><id>http://localhost:4000/interview-preparations/2018/02/04/arrays-lists-dynamic-arrays-part-2</id><content type="html" xml:base="http://localhost:4000/interview-preparations/2018/02/04/arrays-lists-dynamic-arrays-part-2.html">&lt;p&gt;Modern programming languages abstract a lot of low-level details of how our code
+graphical user interface, shell, web browsers, and so on.&lt;/p&gt;</content><author><name></name></author><summary type="html">Let’s talk about a kernel, an operating system, and all the differences between the two. I’ll explain what happens when you turn on your computer, and when you run programs. Computers, smartphones, even cars — operating systems are everywhere. It’s worth knowing why we need this type of software, and what it does (other than taking up that precious disk space).</summary></entry><entry><title type="html">Leaky abstractions, CPU cache …and why programming is fun</title><link href="http://localhost:4000/interview-preparations/2018/02/20/what-is-cpu-cache.html" rel="alternate" type="text/html" title="Leaky abstractions, CPU cache …and why programming is fun" /><published>2018-02-20T00:00:00+01:00</published><updated>2018-02-20T00:00:00+01:00</updated><id>http://localhost:4000/interview-preparations/2018/02/20/what-is-cpu-cache</id><content type="html" xml:base="http://localhost:4000/interview-preparations/2018/02/20/what-is-cpu-cache.html">&lt;p&gt;Modern programming languages abstract a lot of low-level details of how our code
+works. Nonetheless, a good understanding of underlying computer science concepts
+can help you write better code… and pass technical interviews 😉 Let’s talk about
+what is a CPU cache and why it’s important.&lt;/p&gt;
+
+&lt;figure class=&quot;class1 class2&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/880/1*ISecwEffT-z73UDJ3IpPww.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;During my computer science degree, I learned about basic building blocks of
+electronic circuits, and how they can be used to build logic gates. Those logic
+gates provide a &lt;strong&gt;layer of abstraction&lt;/strong&gt; that allows engineers to reason in
+terms of logic operations, and not electrical currents and voltages.&lt;/p&gt;
+
+&lt;p&gt;Logic gates  can be combined  to build a computer that provides us with another
+layer of abstraction. It allows a programmer to think in terms of a set of
+available CPU instructions and not just logic gates.&lt;/p&gt;
+
+&lt;p&gt;Languages like Python allow programmers to think in terms of high level concepts
+and not just basic operations the CPU supports — that’s yet another layer of
+abstraction.&lt;/p&gt;
+
+&lt;figure class=&quot;class1 class2&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/880/1*2x6n0n_2I7piSq8A-Sr35Q.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In computer science, more than in any other field, we have many layers of
+abstraction that enable us to solve problems faster, without worrying about the
+underlying implementation.&lt;/p&gt;
+
+&lt;p&gt;But there is no such thing as a perfect abstraction. &lt;a href=&quot;https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/&quot;&gt;All abstraction
+leak&lt;/a&gt;
+at one point or another,  and we suddenly have to deal with the underlying
+complexity.&lt;/p&gt;
+
+&lt;p&gt;That’s one of the reasons programming is so fun… and frustrating. Concepts and
+ideas interweave, sometimes making debugging very challenging — but also very
+rewarding.&lt;/p&gt;
+
+&lt;h3 id=&quot;high-level-question-low-level-answer&quot;&gt;High level question— low level answer&lt;/h3&gt;
+
+&lt;figure class=&quot;class1 class2&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/880/1*yj8ZHxYczXzyaSuqqmbO-Q.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;figcaption&gt;An array (top) vs a linked list (bottom) — note how elements of a list are
+scattered around the memory&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Let’s look at an example — a high level problem. Let’s say you have to decide
+between using &lt;a href=&quot;https://medium.com/@lukdomanski/interview-preparations-everything-you-need-to-know-about-lists-and-arrays-81093c140e78&quot;&gt;a linked list and an
+array&lt;/a&gt;.
+The main requirement is that iterating through elements has to be as fast as
+possible. What do you think — which data structure will be faster?&lt;/p&gt;
+
+&lt;p&gt;The time it takes to iterate through all elements is &lt;strong&gt;proportional to the
+number of elements&lt;/strong&gt; — the bigger the list/array, the longer it will take to
+visit all elements. Quite intuitive, right?&lt;/p&gt;
+
+&lt;p&gt;From a high-level point of view, it should not matter if you chose to use an
+array or a list. Both data structures should take more or less the same amount
+of time.&lt;/p&gt;
+
+&lt;p&gt;You might be surprised to learn that an array can be &lt;a href=&quot;https://stackoverflow.com/questions/36939141/why-use-lists-when-arrays-are-faster&quot;&gt;significantly
+faster&lt;/a&gt;
+than a linked list.&lt;/p&gt;
+
+&lt;h4 id=&quot;but-whyyyyyyyyy&quot;&gt;But whyyyyyyyyy&lt;/h4&gt;
+
+&lt;p&gt;To understand why, we have to go down many levels of abstraction — we have to
+investigate how the hardware you’re using works. First, we need to understand
+what a &lt;a href=&quot;https://en.wikipedia.org/wiki/CPU_cache&quot;&gt;CPU cache&lt;/a&gt; is.&lt;/p&gt;
+
+&lt;p&gt;Modern processors are very fast in comparison to how much time it takes to
+access main memory. To reduce the time it takes to access RAM, data that is most
+likely to be needed by the CPU is placed in a memory that’s smaller, faster, and
+located “closer” to the processor. We call that memory &lt;strong&gt;CPU cache.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Imagine working in a grocery store that is getting its supplies from a big
+warehouse. The warehouse can store a lot of stuff but it takes a while to find
+and access things kept there.&lt;/p&gt;
+
+&lt;p&gt;That’s why every grocery store has a certain supply of all products (those most
+likely to be purchased by customers) stored on its premises. You can’t store
+that many things in the store, but they are  quickly accessible.&lt;/p&gt;
+
+&lt;p&gt;This is exactly how a CPU cache works.&lt;/p&gt;
+
+&lt;figure class=&quot;class1 class2&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/880/1*jwPBgH1VX05BHhN8vrQBxg.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;figcaption&gt;Main memory is like a warehouse — it can store a lot of stuff but it takes a
+while to access it&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;you-might-be-asking-how-do-we-know-what-data-should-be-stored-in-cache&quot;&gt;You might be asking: how do we know what data should be stored in cache?&lt;/h4&gt;
+
+&lt;p&gt;A computer program is basically just a sequence of instructions to be executed
+by the CPU. Those instructions are often accessed in order, one after another.&lt;/p&gt;
+
+&lt;p&gt;The same is true for arrays — we often iterate through them, accessing all
+elements in order, one after another. If we’re accessing an element with an
+index 5, it’s also likely we are interested in elements 6 and 7.&lt;/p&gt;
+
+&lt;p&gt;That’s why memory addresses that are “close” to a recently accessed address are
+more likely to be visited again. &lt;strong&gt;When accessing some memory, “nearby” segments
+of memory should be place in cache as well.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;okay-that-is-interesting-but-what-does-it-have-to-do-with-our-data-structures&quot;&gt;Okay, that is interesting. But what does it have to do with our data structures?&lt;/h4&gt;
+
+&lt;p&gt;Let’s supposed that a CPU needs to access some memory address. First, it will
+check if it’s available in the cache. If it is, then it can be accessed very
+quickly.&lt;/p&gt;
+
+&lt;p&gt;However, if it’s not currently stored in the cache, we have to fetch it from the
+main memory. We call that a &lt;strong&gt;cache miss&lt;/strong&gt;. Cache misses slow down the execution
+of our code because accessing the main memory is relatively slow.&lt;/p&gt;
+
+&lt;p&gt;Since all elements in the array are stored as a continuous block of memory, when
+reading an element with some index &lt;code class=&quot;highlighter-rouge&quot;&gt;k&lt;/code&gt;, following elements (&lt;code class=&quot;highlighter-rouge&quot;&gt;k+1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;k+2&lt;/code&gt;,
+&lt;code class=&quot;highlighter-rouge&quot;&gt;k+3&lt;/code&gt;,…) will be cached as well.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;This leads to fewer cache misses&lt;/strong&gt; and results in better performance compared
+to a linked list, as in a linked list elements might be scattered around the
+memory.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;To answer a seemingly simple question we had to dive really deep. We had to
+understand what a CPU cache is and how it works.&lt;/p&gt;
+
+&lt;p&gt;I think we can all agree — programming never gets boring 😀&lt;/p&gt;</content><author><name></name></author><summary type="html">Modern programming languages abstract a lot of low-level details of how our code works. Nonetheless, a good understanding of underlying computer science concepts can help you write better code… and pass technical interviews 😉 Let’s talk about what is a CPU cache and why it’s important.</summary></entry><entry><title type="html">Interview preparations: Introduction to arrays, lists and dynamic arrays (Part 2)</title><link href="http://localhost:4000/interview-preparations/2018/02/04/arrays-lists-dynamic-arrays-part-2.html" rel="alternate" type="text/html" title="Interview preparations: Introduction to arrays, lists and dynamic arrays (Part 2)" /><published>2018-02-04T00:00:00+01:00</published><updated>2018-02-04T00:00:00+01:00</updated><id>http://localhost:4000/interview-preparations/2018/02/04/arrays-lists-dynamic-arrays-part-2</id><content type="html" xml:base="http://localhost:4000/interview-preparations/2018/02/04/arrays-lists-dynamic-arrays-part-2.html">&lt;p&gt;Modern programming languages abstract a lot of low-level details of how our code
 works. Nonetheless, a good understanding of underlying computer science concepts
 can help you write better code… and pass technical interviews 😉 In the previous part
 of this article we introduced arrays, lists, and dynamic arrays. Now, we will look into
