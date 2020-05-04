@@ -344,6 +344,12 @@ pre.highlight, code { font-family: 'Consolas', Menlo, monospace; line-height: 1.
 
 body { font-family: "Raleway", sans-serif; font-size: 16px; line-height: 1.2em; margin: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
+figure { max-width: 100%; margin: 0 auto; margin-top: 30px; margin-bottom: 30px; }
+
+figure img { display: block; max-width: 80%; margin: 0 auto; }
+
+figure figcaption { margin-top: -23px; color: #444; font-style: italic; padding: 0 10px 0 10px; max-width: 80%; text-align: center; margin: 0 auto; }
+
 img, embed, object, video { max-width: 100%; }
 
 a { color: #000; transition: color 0.3s; }
@@ -352,9 +358,9 @@ a:hover { color: #0a59b0; }
 
 h2 { margin: 0.7em 0; }
 
-main { margin: 0 90px; display: flex; height: 100%; }
+main { margin: 0 90px; display: flex; height: 100%; max-width: 1200px; }
 
-@media screen and (min-width: 1600px) { main { margin: 0 auto; max-width: 1440px; } }
+@media screen and (min-width: 1600px) { main { margin: 0 auto; max-width: 1200px; } }
 
 @media screen and (max-width: 1280px) { main { margin: 0 75px; } }
 
