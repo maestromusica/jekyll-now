@@ -18,6 +18,21 @@
 .icon-linkedin-squared:before { content: '\f30c'; }
 
 /* '' */
+.icon-instagram:before { content: '\f16d'; }
+
+/* '' */
+.icon-facebook:before { content: '\f308'; }
+
+/* '' */
+.icon-youtube:before { content: '\f167'; }
+
+/* '' */
+.icon-dribbble:before { content: '\f17d'; }
+
+/* '' */
+.icon-flickr:before { content: '\f16e'; }
+
+/* '' */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
 
@@ -355,7 +370,7 @@ main .about { display: flex; height: 100vh; padding-bottom: 15vh; min-width: 220
 
 @media screen and (max-width: 768px) { main .about { height: auto; padding: 10vh 0; } }
 
-@media screen and (min-width: 769px) { main .about { position: fixed; } }
+@media screen and (min-width: 769px) { main .about { position: fixed; max-width: 285px; } }
 
 main .about h2 { font-size: 22px; margin-top: 25px; margin-bottom: 0; color: #222222; font-weight: normal; }
 
@@ -365,9 +380,9 @@ main .about img { max-width: 150px; }
 
 #title a { text-decoration: none; }
 
-.social { list-style-type: none; padding: 0; margin-top: 0; }
+.social { list-style-type: none; padding: 0; margin-top: 0; display: flex; flex-wrap: wrap; justify-content: center; }
 
-.social li { float: left; }
+.social a { margin-bottom: .5em; }
 
 .social li i { font-size: 34px; }
 
