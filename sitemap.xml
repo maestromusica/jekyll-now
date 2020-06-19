@@ -9,6 +9,11 @@
             <lastmod>2019-06-07T00:00:00+00:00</lastmod>
             <priority>1.00</priority>
         </url><url>
+                <loc>http://thosepeskybugs.com/brag-log/</loc>
+                <lastmod>2020-06-16T00:00:00+02:00</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>0.80</priority>
+            </url><url>
                 <loc>http://thosepeskybugs.com/why-should-you-blog/</loc>
                 <lastmod>2020-06-02T00:00:00+02:00</lastmod>
                 <changefreq>weekly</changefreq>
