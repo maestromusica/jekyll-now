@@ -438,4 +438,8 @@ main .about img { max-width: 150px; }
 
 #posts-label { border-bottom: 1px solid #eee; font-size: 15px; color: #777; text-transform: uppercase; letter-spacing: 0.5px; padding-bottom: 10px; font-weight: normal; }
 
+.embed-giphy { width: 50%; margin: 0 auto; }
+
+.embed-giphy p { width: 100%; text-align: center; }
+
 /*# sourceMappingURL=style.css.map */

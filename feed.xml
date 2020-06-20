@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://thosepeskybugs.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://thosepeskybugs.com/" rel="alternate" type="text/html" /><updated>2020-06-19T15:15:28+02:00</updated><id>http://thosepeskybugs.com/feed.xml</id><title type="html">Those Pesky Bugs! Blog</title><subtitle>Random rumblings of a software engineering who has a special talent for  introducing hard to catch bugs better than anyone else.</subtitle><entry><title type="html">How to never forget your achievements?</title><link href="http://thosepeskybugs.com/brag-log/" rel="alternate" type="text/html" title="How to never forget your achievements?" /><published>2020-06-16T00:00:00+02:00</published><updated>2020-06-16T00:00:00+02:00</updated><id>http://thosepeskybugs.com/brag-log</id><content type="html" xml:base="http://thosepeskybugs.com/brag-log/">&lt;p&gt;What are your biggest accomplishments in the last 12 months? Take a minute to think about it. Not as easy as you thought, huh? It turns out that we can forget our achievements very quickly.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://thosepeskybugs.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://thosepeskybugs.com/" rel="alternate" type="text/html" /><updated>2020-06-20T15:23:00+02:00</updated><id>http://thosepeskybugs.com/feed.xml</id><title type="html">Those Pesky Bugs! Blog</title><subtitle>Random rumblings of a software engineering who has a special talent for  introducing hard to catch bugs better than anyone else.</subtitle><entry><title type="html">How to never forget your achievements</title><link href="http://thosepeskybugs.com/brag-log/" rel="alternate" type="text/html" title="How to never forget your achievements" /><published>2020-06-16T00:00:00+02:00</published><updated>2020-06-16T00:00:00+02:00</updated><id>http://thosepeskybugs.com/brag-log</id><content type="html" xml:base="http://thosepeskybugs.com/brag-log/">&lt;p&gt;What are your biggest accomplishments in the last 12 months? Take a minute to think about it. Not as easy as you thought, huh? It turns out that we can forget our achievements very quickly.&lt;/p&gt;
 
 &lt;p&gt;The problem is, similar questions come up all the time - during the annual performance review, whenever you update your CV, whenever you negotiate a raise. And, for obvious reasons, it’s really important that you can give a good answer.&lt;/p&gt;
 
@@ -7,6 +7,10 @@
 &lt;p&gt;I found that keeping a log of all my wins, big or small, helps me to see the bigger picture and increases my work satisfaction, especially when the day-to-day progress does not feel significant.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-system&quot;&gt;The system&lt;/h2&gt;
+
+&lt;figure class=&quot;class1 class2&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/movement.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;The system is dead simple: &lt;strong&gt;all you need is a notebook and a pen. You write down your accomplishments. That’s it.&lt;/strong&gt;&lt;/p&gt;
 
@@ -28,6 +32,11 @@
 
 &lt;h2 id=&quot;throw-in-some-numbers&quot;&gt;Throw in some numbers&lt;/h2&gt;
 
+&lt;figure class=&quot;class1 class2&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/numbers.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;figcaption&gt;&lt;a href=&quot;https://www.pexels.com/photo/red-background-with-123456789-text-overlay-1329296/&quot;&gt;Source&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
 &lt;p&gt;Optionally, you can try throwing in some numbers (if you can). For example, “saved the company X pounds”, or “built an app with Y active users”. Those will come in handy when you need to update your resume.&lt;/p&gt;
 
 &lt;h2 id=&quot;make-it-personal&quot;&gt;Make it personal&lt;/h2&gt;
@@ -47,6 +56,10 @@
 &lt;p&gt;And by the way, my system is focused on noting down your wins as often as possible and iteratively improving the document. Julia Evans suggests creating a coherent, well-structured document that is updated only periodically and that you could share with others. Check out her &lt;a href=&quot;https://jvns.ca/blog/brag-documents/&quot;&gt;blog post&lt;/a&gt; if that sounds more appealing.&lt;/p&gt;
 
 &lt;h2 id=&quot;anything-that-makes-you-feel-proud&quot;&gt;Anything that makes you feel proud&lt;/h2&gt;
+
+&lt;div class=&quot;embed-giphy&quot;&gt;
+    &lt;div style=&quot;width:100%;height:0;padding-bottom:55%;position:relative;&quot;&gt;&lt;iframe src=&quot;https://giphy.com/embed/jkSvCVEXWlOla&quot; width=&quot;100%&quot; height=&quot;100%&quot; style=&quot;position:absolute&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/dog-working-typing-jkSvCVEXWlOla&quot;&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Over-include things by default.&lt;/p&gt;
 
